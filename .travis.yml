@@ -15,6 +15,7 @@ after_success:
  - docker build -t edeel89/multi-worker ./worker
  #log in docker
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passowrd-s
+ #push to dockerhub
  - docker push edeel89/multi-client
  - docker push edeel89/multi-nginx
  - docker push edeel89/multi-server
